@@ -1,11 +1,11 @@
 import './App.css';
-import Playlist from './components/playlist/index.js';
+import Record from './pages/home/index.js';
 
-const App = () => {
+function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Playlist />
+        <Record />
       </header>
     </div>
   );
