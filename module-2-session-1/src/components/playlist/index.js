@@ -1,7 +1,11 @@
 import React from 'react';
-import SongData from '../../data/song';
+import SongData from '../../data/song/index.js';
+import { useSelector, useDispatch } from 'react-redux';
+import { useState } from 'react';
 
 const Playlist = () => {
+    const dispatch = useDispatch();
+    
     return (
         <>
             <p>Album: {SongData.album.name}</p>
