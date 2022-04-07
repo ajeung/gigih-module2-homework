@@ -1,14 +1,25 @@
 import './App.css';
-import Record from './pages/home/index.js';
 import createPlaylist from './components/create-playlist';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Redirect } from 'react-router-dom';
 
 function App() {
+  const isLogin = true;
   return (
-    <div className="App">
-      <header className="App-header">
-        <createPlaylist />
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/private">
+          {isLogin ? (
+            <createPlaylist />
+          ) : (
+            <Redirect to="/" />
+          )}
+        </Route>
+        <Route path="/">
+          <div>You are in root URL</div>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
