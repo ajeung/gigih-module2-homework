@@ -1,9 +1,16 @@
 import React from 'react';
 import SongData from '../../data/song/index.js';
-import { useSelector, useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useEffect, useState } from "react";
+import { recordSlice } from '../../redux/slice';
+import { useDispatch } from "react-redux";
 
 const Playlist = () => {
+    const CLIENT_ID = "bd8f5c39bbdb4caca61e9eb3aca26dbd";
+    const REDIRECT_URI = "http://localhost:3000";
+    const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
+    const RESPONSE_TYPE = "token";
+    const SCOPE = "playlist-modify-private";
+    
     const dispatch = useDispatch();
     
     return (
