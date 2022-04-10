@@ -1,6 +1,6 @@
 import './App.css';
-import createPlaylist from './components/create-playlist';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import CreatePlaylist from './components/create-playlist';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Redirect } from 'react-router-dom';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
       <Switch>
         <Route path="/private">
           {isLogin ? (
-            <createPlaylist />
+            <CreatePlaylist />
           ) : (
             <Redirect to="/" />
           )}

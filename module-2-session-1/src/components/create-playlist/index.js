@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-class createPlaylist extends Component {
+class CreatePlaylist extends Component {
     constructor(props) {
         super(props);
         this.state = {playlist: []};
@@ -24,4 +24,4 @@ class createPlaylist extends Component {
     }
 }
 
-export default createPlaylist;
+export default CreatePlaylist;
