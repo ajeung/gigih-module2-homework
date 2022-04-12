@@ -1,4 +1,4 @@
-const SongData = [
+const data = [
   {
     album: {
       album_type: "album",
@@ -795,4 +795,4 @@ const SongData = [
   }
 ];
 
-export default SongData;
+export default data;
