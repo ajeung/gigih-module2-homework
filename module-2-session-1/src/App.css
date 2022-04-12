@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  text-align: left;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -14,7 +15,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -38,9 +38,11 @@
 }
 
 img {
-  width: 244px;
-  margin-bottom: 30px;
-  
+  width: 150px;
+}
+
+p {
+  font-size: small;
 }
 
 table {
@@ -54,4 +56,34 @@ th {
 
 td {
   font-size: 18px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-container > div {
+  padding: 20px;
+  border: 1px solid white;
+  width: 500px;
+  height: 150px;
+  margin: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 2px;
+  cursor: pointer;
 }
