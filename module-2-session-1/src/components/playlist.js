@@ -1,30 +1,33 @@
 import React from 'react';
-// import SongData from '../data/song.js';
-// import { useEffect, useState } from "react";
-// import { recordSlice } from '../redux/slice';
-// import { useDispatch } from "react-redux";
+import './playlist.css';
+import { Card, CardMedia, CardActions, CardContent, Typography, Button } from '@mui/material';
 
 function Playlist ({ name, artists, album }) {
-    // const CLIENT_ID = "bd8f5c39bbdb4caca61e9eb3aca26dbd";
-    // const REDIRECT_URI = "http://localhost:3000";
-    // const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
-    // const RESPONSE_TYPE = "token";
-    // const SCOPE = "playlist-modify-private";
-    
-    // const dispatch = useDispatch();
-    
     return (
         <div className="flex-container">
-            <div className="grid-container">
-                <div className="item1">
-                    <img src={album.images[0].url} alt="album" />
-                </div>
-                <div className="item2">
-                    <p>{name}</p>
-                    <p>{artists[0].name}</p>
-                    <p>{album.name}</p>
-                    <button>Select</button>
-                </div>
+            <div>
+                <Card>
+                    <CardMedia sx={{ maxWidth: 345 }}
+                        component="img"
+                        alt="album"
+                        height="200"
+                        image={album.images[0].url}
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="subtitle1" component="div">
+                            {name}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            {artists[0].name}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            {album.name}
+                        </Typography>
+                    </CardContent>
+                    <CardActions>
+                        <Button variant="contained" size="small">Select</Button>
+                    </CardActions>
+                </Card>
             </div>
         </div>
     )
