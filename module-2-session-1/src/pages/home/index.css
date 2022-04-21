@@ -1,0 +1,51 @@
+.container {
+    padding: 20px 50px;
+}
+
+.item1 { 
+    grid-area: search; 
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.item2 { 
+    grid-area: button;
+    text-align: right; 
+}
+
+.item3 { 
+    grid-area: title;
+    text-align: center;
+}
+
+.item4 { grid-area: song; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'button button button'
+      'title title title'
+      'search search search'
+      'song song song'
+      'footer footer footer';
+    gap: 10px;
+    padding: 10px;
+}
+
+.grid-container > div {
+    padding: 20px;
+    font-size: 30px;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 2px;
+    cursor: pointer;
+}
